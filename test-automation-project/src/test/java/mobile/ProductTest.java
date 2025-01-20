@@ -14,6 +14,7 @@ public class ProductTest extends BaseAndroidClass
     public void setUp()
     {
         homePage = new HomePage();
+        homePage.clickPermissionAllowButton();
         homePage.clickSelectLocation();
     }
 

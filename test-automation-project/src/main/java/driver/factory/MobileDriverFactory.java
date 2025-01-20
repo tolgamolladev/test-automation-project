@@ -19,15 +19,16 @@ public class MobileDriverFactory {
         androidCaps.setCapability("appium:udid", "emulator-5554"); //DeviceId from "adb devices" command
         androidCaps.setCapability("appium:platformName", "Android");
         androidCaps.setCapability("appium:platformVersion", "15.0");
-        androidCaps.setCapability("appium:skipUnlock", "true");
-        androidCaps.setCapability("appium:app", System.getProperty("user.dir") + "/src/main/resources/apps/hepsiburada.apk");
+        //androidCaps.setCapability("appium:skipUnlock", "true");
+        //androidCaps.setCapability("appium:app", System.getProperty("user.dir") + "/src/main/resources/apps/hb.apk");
+        androidCaps.setCapability("appium:newCommandTimeout", "600");
+        //androidCaps.setCapability("appium:autoGrantPermissions", true);
         //androidCaps.setCapability("appium:fullReset", "true");
         //androidCaps.setCapability("appium:noReset", "false");
         androidCaps.setCapability("appium:appPackage", "com.pozitron.hepsiburada");
-        androidCaps.setCapability("appium:appActivity", "com.pozitron.hepsiburada/com.uptodown.activities.MainActivity");
+        androidCaps.setCapability("appium:appActivity", "com.hepsiburada.ui.startup.SplashActivity");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), androidCaps);
         //wait = new WebDriverWait(driver, 10);
-        System.out.println("***** Android App *****");
 
         return driver;
     }
