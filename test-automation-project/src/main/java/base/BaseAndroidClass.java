@@ -11,12 +11,15 @@ import java.net.MalformedURLException;
 public class BaseAndroidClass extends MobileDriverFactory
 {
 
-    protected static AppiumDriver driver;
+    protected AppiumDriver driver;
+    protected MobileDriverManager mobileDriverManager;
 
     @BeforeClass
     public void before() throws MalformedURLException
     {
         driver = createDriver();
+
+        mobileDriverManager = new MobileDriverManager(driver);
 
         MobileDriverManager.setDriver(driver);
     }
