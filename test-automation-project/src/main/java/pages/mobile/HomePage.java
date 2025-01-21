@@ -22,15 +22,11 @@ public class HomePage extends AndroidPageObject
     @FindBy(id = "com.pozitron.hepsiburada:id/search_suggestion")
     private List<WebElement> searcSuggestionList;
 
-    // click methods
-
     public SearchResultPage clickFirstSearchSuggestion()
     {
         searcSuggestionList.get(1).click();
         return new SearchResultPage(mobileDriverManager);
     }
-
-    //send keys methods
 
     public HomePage sendKeysSearchBox(String searchTerm)
     {
@@ -38,8 +34,6 @@ public class HomePage extends AndroidPageObject
         mobileDriverManager.sendKeys(searchBox, searchTerm);
         return this;
     }
-
-    // other methods
 
     public boolean assertHomePage()
     {

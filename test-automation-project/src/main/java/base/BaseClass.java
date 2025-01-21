@@ -1,7 +1,6 @@
 package base;
 
 import driver.factory.WebDriverFactory;
-import driver.manager.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;

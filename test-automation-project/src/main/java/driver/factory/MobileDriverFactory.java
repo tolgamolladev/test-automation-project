@@ -23,7 +23,6 @@ public class MobileDriverFactory {
         androidCaps.setCapability("appium:appPackage", "com.pozitron.hepsiburada");
         androidCaps.setCapability("appium:appActivity", "com.hepsiburada.ui.startup.SplashActivity");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), androidCaps);
-        //wait = new WebDriverWait(driver, 10);
 
         return driver;
     }

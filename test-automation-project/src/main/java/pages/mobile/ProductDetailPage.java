@@ -22,8 +22,6 @@ public class ProductDetailPage extends AndroidPageObject
     @FindBy(xpath = "//android.widget.TextView[contains(@text, 'Sepete git')]")
     private WebElement goToBasket;
 
-    //
-
     public ProductDetailPage clickAddToBasket()
     {
         mobileDriverManager.click(addToBasket);
@@ -35,8 +33,6 @@ public class ProductDetailPage extends AndroidPageObject
         mobileDriverManager.click(goToBasket);
         return new BasketPage(mobileDriverManager);
     }
-
-    // getText methods
 
     public String getTextProductTitle()
     {

@@ -17,8 +17,6 @@ public class BasketPage extends AndroidPageObject
     @FindBy(xpath = "//android.widget.TextView[@resource-id = 'basket_price']")
     private WebElement productPrice;
 
-    // getText methods
-
     public String getTextProductName()
     {
         return productName.getText();

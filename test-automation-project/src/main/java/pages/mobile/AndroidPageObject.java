@@ -19,8 +19,6 @@ public class AndroidPageObject
     @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     private WebElement permissionAllowButton;
 
-    //
-
     public void clickPermissionAllowButton()
     {
         mobileDriverManager.click(permissionAllowButton);
