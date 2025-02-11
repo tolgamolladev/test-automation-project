@@ -1,7 +1,6 @@
 package pages.mobile;
 
 import driver.manager.MobileDriverManager;
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,10 +9,10 @@ public class AndroidPageObject
 {
     public MobileDriverManager mobileDriverManager;
 
-    protected AndroidPageObject(AppiumDriver driver)
+    protected AndroidPageObject(MobileDriverManager mobileDriverManager)
     {
-        mobileDriverManager = new MobileDriverManager(driver);
-        PageFactory.initElements(driver, this);
+        this.mobileDriverManager = mobileDriverManager;
+        PageFactory.initElements(mobileDriverManager.getDriver(), this);
     }
 
     @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")

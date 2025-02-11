@@ -1,5 +1,6 @@
 package pages.web;
 
+import driver.manager.WebDriverManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
@@ -9,6 +10,10 @@ import java.util.stream.IntStream;
 
 public class NewsDetailPage extends PageObject
 {
+    public NewsDetailPage(WebDriverManager webDriverManager)
+    {
+        super(webDriverManager);
+    }
 
     @FindBy(xpath = "//h1[@class = 'article-hero__title wp-block-post-title']")
     private WebElement newsTitle;

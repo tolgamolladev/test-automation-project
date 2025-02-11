@@ -1,0 +1,10 @@
+<suite name="TestSuite">
+    <listeners>
+        <listener class-name="listener.TestListener"/>
+    </listeners>
+    <test name="SampleTest">
+        <classes>
+            <class name="web.WebTest"/>
+        </classes>
+    </test>
+</suite>

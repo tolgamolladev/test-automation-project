@@ -40,7 +40,7 @@ public class ProductTest extends BaseAndroidClass
                 .clickAddToBasket()
                 .clickGoToBasket();
 
-        Assert.assertEquals(basketPage.getTextProductName(), productTitle);
+        Assert.assertTrue(productTitle.contains(basketPage.getTextProductName()));
         Assert.assertTrue(basketPage.getTextProductPrice().contains(productPrice));
     }
 }

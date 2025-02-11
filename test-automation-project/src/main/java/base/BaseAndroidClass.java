@@ -6,6 +6,7 @@ import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 
 public class BaseAndroidClass extends MobileDriverFactory
@@ -19,9 +20,9 @@ public class BaseAndroidClass extends MobileDriverFactory
     {
         driver = createDriver();
 
-        mobileDriverManager = new MobileDriverManager(driver);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        MobileDriverManager.setDriver(driver);
+        mobileDriverManager = new MobileDriverManager(driver);
     }
 
 

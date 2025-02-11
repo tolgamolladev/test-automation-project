@@ -18,7 +18,7 @@ public class WebTest extends BaseClass
     @BeforeMethod
     public void setUp()
     {
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage(webDriverManager);
         newsPage = homePage.clickLatestTab();
     }
 

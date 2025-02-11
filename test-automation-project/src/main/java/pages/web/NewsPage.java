@@ -1,5 +1,6 @@
 package pages.web;
 
+import driver.manager.WebDriverManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -7,6 +8,9 @@ import java.util.List;
 
 public class NewsPage extends PageObject
 {
+    public NewsPage(WebDriverManager webDriverManager) {
+        super(webDriverManager);
+    }
 
     @FindBy(id = "h-latest-news")
     private WebElement latestNewsTitle;
@@ -23,7 +27,7 @@ public class NewsPage extends PageObject
     public NewsDetailPage clickNewsImage(int index)
     {
         newsImage.get(index).click();
-        return new NewsDetailPage();
+        return new NewsDetailPage(webDriverManager);
     }
 
     public String getTextNewsTitle()

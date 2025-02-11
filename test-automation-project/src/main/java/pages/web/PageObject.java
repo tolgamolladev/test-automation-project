@@ -1,13 +1,18 @@
 package pages.web;
 
 import driver.manager.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class PageObject
 {
-    protected PageObject()
+    protected WebDriverManager webDriverManager;
+    protected PageObject(WebDriverManager webDriverManager)
     {
-        PageFactory.initElements(WebDriverManager.getDriver(), this);
+        this.webDriverManager = webDriverManager;
+        PageFactory.initElements(webDriverManager.getDriver(), this);
     }
+
+
 
 }

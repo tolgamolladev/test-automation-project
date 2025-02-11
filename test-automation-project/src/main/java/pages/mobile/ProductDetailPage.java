@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class ProductDetailPage extends AndroidPageObject
 {
     public ProductDetailPage(MobileDriverManager mobileDriverManager) {
-        super(mobileDriverManager.getDriver());
+        super(mobileDriverManager);
     }
 
     @FindBy(xpath = "//*[@resource-id = 'summaryTitleComponent']/android.widget.TextView")

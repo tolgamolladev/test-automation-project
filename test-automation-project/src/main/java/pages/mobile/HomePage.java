@@ -10,7 +10,7 @@ public class HomePage extends AndroidPageObject
 {
     public HomePage(MobileDriverManager mobileDriverManager)
     {
-        super(mobileDriverManager.getDriver());
+        super(mobileDriverManager);
     }
 
     @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView[@content-desc=\"locationComponentOnHome\"]/android.view.View/android.view.View\n")

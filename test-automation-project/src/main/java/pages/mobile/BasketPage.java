@@ -8,7 +8,7 @@ public class BasketPage extends AndroidPageObject
 {
     public BasketPage(MobileDriverManager mobileDriverManager)
     {
-        super(mobileDriverManager.getDriver());
+        super(mobileDriverManager);
     }
 
     @FindBy(xpath = "//*[@resource-id = 'productName']")

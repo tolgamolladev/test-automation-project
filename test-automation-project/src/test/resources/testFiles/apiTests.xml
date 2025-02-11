@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ApiTestSuite" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="listener.TestListener"/>
+    </listeners>
+    <test name="ApiTests">
+        <classes>
+            <class name="web.ApiTest"/>
+        </classes>
+    </test>
+
+</suite>
+

@@ -9,7 +9,7 @@ import java.util.List;
 public class SearchResultPage extends AndroidPageObject
 {
     public SearchResultPage(MobileDriverManager mobileDriverManager) {
-        super(mobileDriverManager.getDriver());
+        super(mobileDriverManager);
     }
 
     @FindBy(id = "com.pozitron.hepsiburada:id/composeProductBoxView")
